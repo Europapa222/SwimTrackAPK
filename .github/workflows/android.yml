@@ -25,10 +25,10 @@ jobs:
 
       - name: Build Debug APK
         run: |
-          GRADLE_DIR=$(dirname $(find project_src -name "gradlew" | head -n 1))
+          GRADLE_DIR=$(dirname $(find project_src -name "gradle" | head -n 1))
           cd "$GRADLE_DIR"
-          chmod +x ./gradlew
-          ./gradlew assembleDebug
+          chmod +x ./gradle
+          ./gradle assembleDebug
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
