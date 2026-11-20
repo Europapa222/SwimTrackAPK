@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Unzip project
-        run: unzip SwimTrack-Android.zip -d project_src
+        run: unzip TESTLAB-Stage1-Source-fixed.zip -d project_src
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -33,5 +33,5 @@ jobs:
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SwimTrack-debug-apk
+          name: debug-apk
           path: project_src/**/app/build/outputs/apk/debug/*.apk
